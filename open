@@ -1,0 +1,13 @@
+import json
+
+# Загрузка данных из JSON-файла
+with open('data.json', 'r') as file:
+    data = json.load(file)
+
+# Изменение данных
+data['name'] = 'John'
+data['age'] = 30
+
+# Сохранение данных в JSON-файл
+with open('data.json', 'w') as file:
+    json.dump(data, file)
